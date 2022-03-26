@@ -10,11 +10,6 @@ import Vue from 'vue'
 
 export default Vue.extend({
   name: 'HomePage',
-  async asyncData({ $auth, redirect }) {
-    if (!$auth.loggedIn) {
-      return redirect('/login')
-    }
-  },
   methods: {
     logout() {
       this.$auth.logout()
