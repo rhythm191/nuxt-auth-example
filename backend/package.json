@@ -1,18 +1,17 @@
 {
-  "name": "nuxt-auth-example",
+  "name": "backend",
   "version": "1.0.0",
-  "description": "nuxt-auth example",
-  "main": "index.js",
+  "description": "nuxt-auth backend",
+  "main": "index.ts",
   "scripts": {
-    "test": "jest"
+    "dev": "ts-node-dev index.ts",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rhythm191/nuxt-auth-example.git"
   },
   "keywords": [
-    "nuxt",
-    "nuxt-auth",
     "fastify"
   ],
   "author": "rhythm191",
@@ -21,13 +20,9 @@
     "url": "https://github.com/rhythm191/nuxt-auth-example/issues"
   },
   "homepage": "https://github.com/rhythm191/nuxt-auth-example#readme",
-  "workspaces": [
-    "frontend",
-    "backend"
-  ],
-  "devDependencies": {
-    "@types/node": "^17.0.23",
-    "ts-node-dev": "^1.1.8",
-    "typescript": "^4.6.3"
+  "dependencies": {
+    "fastify": "^3.27.4",
+    "fastify-cors": "^6.0.3",
+    "fastify-helmet": "^7.0.1"
   }
 }
