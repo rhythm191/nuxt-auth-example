@@ -1,8 +1,18 @@
 <template>
   <div>
-    <nuxt-link to="/login">ログイン</nuxt-link>
-
-    <h1>Hello world</h1>
+    <form @submit.prevent="userLogin">
+      <div>
+        <label>Username</label>
+        <input type="text" v-model="login.username" />
+      </div>
+      <div>
+        <label>Password</label>
+        <input type="text" v-model="login.password" />
+      </div>
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
   </div>
 </template>
 
@@ -10,7 +20,7 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'IndexPage',
+  name: 'LoginPage',
   data() {
     return {
       login: {
