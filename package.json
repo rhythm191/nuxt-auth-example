@@ -1,0 +1,24 @@
+{
+  "name": "nuxt-auth-example",
+  "version": "1.0.0",
+  "description": "nuxt-auth example",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhythm191/nuxt-auth-example.git"
+  },
+  "keywords": [
+    "nuxt",
+    "nuxt-auth",
+    "fastify"
+  ],
+  "author": "rhythm191",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rhythm191/nuxt-auth-example/issues"
+  },
+  "homepage": "https://github.com/rhythm191/nuxt-auth-example#readme"
+}
