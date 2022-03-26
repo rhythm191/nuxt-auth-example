@@ -1,6 +1,7 @@
 <template>
   <div>
-    <h1>ログインしました。こんにちわ</h1>
+    <h1>こんにちは {{ $auth.user.username }}さん</h1>
+    <button @click="logout">ログアウト</button>
   </div>
 </template>
 
@@ -9,10 +10,16 @@ import Vue from 'vue'
 
 export default Vue.extend({
   name: 'HomePage',
-  async asyncData({ $auth }) {
+  async asyncData({ $auth, redirect }) {
     if (!$auth.loggedIn) {
-      return
+      return redirect('/login')
     }
+  },
+  methods: {
+    logout() {
+      this.$auth.logout()
+      this.$router.push('/login')
+    },
   },
 })
 </script>

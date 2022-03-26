@@ -34,6 +34,8 @@ export default Vue.extend({
       try {
         let response = await this.$auth.loginWith('local', { data: this.login })
         console.log(response)
+
+        this.$router.push(`/home`)
       } catch (err) {
         console.log(err)
       }
