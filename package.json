@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/rhythm191/nuxt-auth-example/issues"
   },
-  "homepage": "https://github.com/rhythm191/nuxt-auth-example#readme"
+  "homepage": "https://github.com/rhythm191/nuxt-auth-example#readme",
+  "workspaces": [
+    "frontend"
+  ]
 }
