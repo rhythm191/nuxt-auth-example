@@ -21,7 +21,6 @@ import Vue from 'vue'
 
 export default Vue.extend({
   name: 'LoginPage',
-  auth: false,
   data() {
     return {
       login: {
@@ -33,10 +32,12 @@ export default Vue.extend({
   methods: {
     async userLogin() {
       try {
-        let response = await this.$auth.loginWith('local', { data: this.login })
+        const response = await this.$auth.loginWith('local', {
+          data: this.login,
+        })
         console.log(response)
 
-        this.$router.push(`/home`)
+        this.$router.push('/home')
       } catch (err) {
         console.log(err)
       }
